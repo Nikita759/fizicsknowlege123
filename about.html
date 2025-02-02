@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О нас</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #333;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+}
+nav {
+margin: 20px;
+text-align: center;
+}
+nav a {
+margin: 0 10px;
+text-decoration: none;
+color: #333;
+}
+section {
+padding: 20px;
+text-align: center;
+}
+footer {
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px 0;
+position: fixed;
+width: 100%;
+bottom: 0;
+}
+button {
+margin: 20px;
+padding: 10px 20px;
+font-size: 16px;
+background-color: #333;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background-color: #555;
+}
+.img-container {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+.img-container img {
+width: 200px;
+height: 150px;
+object-fit: cover;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.img-container img:hover {
+transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+<header>
+<h1>О нас</h1>
+</header>
+<section id="about">
+<h2>Обо мне</h2>
+<p>Учусь в физмате второй год - получаю только 10</p>
+<p>С ценами на услуги можете ознакомиться в разделе услуги</p>
+<div class="img-container">
+<img src="image1.jpg" alt="Image 1" onclick="zoomImage(this)">
+<img src="image2.jpg" alt="Image 2" onclick="zoomImage(this)">
+<img src="image3.png" alt="Image 3" onclick="zoomImage(this)">
+</div>
+<button onclick="location.href='index.html'">Вернуться на главную</button>
+</section>
+<footer>
+<p>&copy; 2023 Мой первый сайт. Все права защищены.</p>
+</footer>
+
+<script>
+function zoomImage(img) {
+    if (img.style.transform === "scale(2)") {
+        img.style.transform = "scale(1)";
+    } else {
+        img.style.transform = "scale(2)";
+    }
+}
+</script>
+</body>
+</html>
